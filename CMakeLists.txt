@@ -88,7 +88,9 @@ link_directories(${OCTOMAP_LIBRARY_DIRS})
 link_libraries(${OCTOMAP_LIBRARIES})
 
 # g2o #######################
+set(G2O_DIR $ENV{G2O_DIR})
 find_package(G2O REQUIRED)
+message("G2O_DIR is " ${G2O_DIR})
 include_directories(SYSTEM ${G2O_INCLUDE_DIR} ${G2O_INCLUDE_DIRS})
 link_directories(${G2O_LIBRARY_DIRS})
 link_libraries(${G2O_LIBRARIES})
